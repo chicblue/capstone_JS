@@ -1,0 +1,260 @@
+// text--color
+$text-light-c0: #fff;
+$text-dark-c0: #000;
+// Background--color
+$bg-light-c0: #fff;
+$bg-dark-c0: #000;
+$bg-light-c1: #ececec;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+.header {
+  .container-fluid {
+    background-color: $bg-dark-c0;
+
+    .header-content {
+      height: 50px;
+      width: 95%;
+      margin: 0 auto;
+
+      .header-logo {
+        img {
+          height: 32px;
+          width: 116px;
+        }
+      }
+
+      .header-right {
+        ul {
+          li {
+            display: inline;
+            margin-left: 10px;
+
+            a {
+              text-decoration: none;
+              color: $text-light-c0;
+              font-size: 16px;
+              font-weight: 300;
+
+              img {
+                width: 31px;
+                height: 31px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MENU */
+.menu-shoes {
+  .container-fluid {
+    .menu-content {
+      width: 95%;
+      margin: 0 auto;
+      height: 50px;
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-right: 25px;
+          display: inline;
+
+          a {
+            text-decoration: none;
+            color: $text-dark-c0;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 300;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* CAROUSEL */
+.my-carousel {
+  .carousel {
+    .carousel-indicators {
+      [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    overflow: hidden;
+
+    .carousel-control-prev {
+      left: -50px;
+      top: -30px;
+
+      .carousel-control-prev-icons {
+        background-image: url(/assets/img/Polygon\ 2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 60px;
+      }
+    }
+
+    .carousel-control-next {
+      top: -30px;
+      right: -60px;
+
+
+      .carousel-control-next-icons {
+        background: url(/assets/img/Polygon\ 1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 60px;
+      }
+    }
+
+
+
+    .carousel-inner {
+      .carousel-item {
+        position: relative;
+
+        img {
+          margin-top: 170px;
+        }
+
+        .carousel-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          top: -20%;
+          left: 10%;
+          width: 90%;
+          margin: 0 auto;
+
+          .carousel-img {
+            width: 70%;
+
+            img {}
+          }
+
+          .carousel-title {
+            width: 30%;
+            margin-top: 165px;
+
+            h3 {
+              font-style: normal;
+              font-weight: 300;
+              font-size: 40px;
+              line-height: 48px;
+            }
+
+            p {
+              font-style: normal;
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 24px;
+            }
+
+            button {
+              width: 150px;
+              height: 50px;
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    button {}
+  }
+}
+
+/* FOOTER */
+.footer {
+  .container-fluid {
+    padding: 0;
+
+    .footer-content {
+
+      .row {
+        margin-top: 10px;
+        width: 85%;
+        margin: 0 auto;
+
+        .col-4 {
+          margin: 20px 0;
+
+          h4 {
+            font-weight: 700;
+            font-size: 20px;
+          }
+
+          ul {
+            list-style: none;
+
+            li {
+              a {
+                font-size: 13px;
+                font-weight: 400;
+                text-decoration: none;
+                color: $text-dark-c0;
+              }
+            }
+          }
+        }
+
+        .items-2 {
+          margin: 20px 0;
+
+          p {
+            font-size: 13px;
+            font-weight: 400;
+            margin-bottom: 8px;
+          }
+
+          a {
+            text-decoration: none;
+            color:
+              #dc908c;
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .row-bottom {
+        .items-2 {
+          margin: 40px 0;
+        }
+      }
+
+    }
+
+    .content-bottom {
+      background-color: $bg-light-c1;
+    }
+
+  }
+}
