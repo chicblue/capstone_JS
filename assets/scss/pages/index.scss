@@ -1,15 +1,35 @@
 // text--color
 $text-light-c0: #fff;
+$text-light-c1: #b7b4b4;
 $text-dark-c0: #000;
 // Background--color
 $bg-light-c0: #fff;
 $bg-dark-c0: #000;
 $bg-light-c1: #ececec;
+$bg-light-c2: #f8f8f8;
+$bg-light-c3: #dedddc;
+
+//font-size:
+$fs-1: 12px;
+$fs-2: 13px;
+$fs-3: 16px;
+$fs-4: 18px;
+$fs-5: 20px;
+$fs-6: 22px;
+//font-weight:
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semi: 600;
+$fw-bold: 700;
+//Button:
+$bg-btn-warning: #e1b067;
+$bg-btnhover-warning: #9b5e03;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html,
@@ -49,8 +69,8 @@ li {
             a {
               text-decoration: none;
               color: $text-light-c0;
-              font-size: 16px;
-              font-weight: 300;
+              font-size: $fs-3;
+              font-weight: $fw-light;
 
               img {
                 width: 31px;
@@ -84,7 +104,11 @@ li {
             color: $text-dark-c0;
             font-size: 20px;
             line-height: 24px;
-            font-weight: 300;
+            font-weight: $fw-light;
+
+          }
+
+          .menu-opacity {
             opacity: 0.7;
           }
         }
@@ -154,26 +178,27 @@ li {
           margin: 0 auto;
 
           .carousel-img {
-            width: 70%;
+            width: 55%;
 
             img {}
           }
 
           .carousel-title {
-            width: 30%;
+            width: 45%;
             margin-top: 165px;
+            padding-right: 60px;
 
             h3 {
               font-style: normal;
-              font-weight: 300;
-              font-size: 40px;
-              line-height: 48px;
+              font-weight: $fw-semi;
+              font-size: 36px;
+
             }
 
             p {
               font-style: normal;
-              font-weight: 300;
-              font-size: 20px;
+              font-weight: $fw-light;
+              font-size: $fs-3;
               line-height: 24px;
             }
 
@@ -181,6 +206,15 @@ li {
               width: 150px;
               height: 50px;
               margin-top: 15px;
+              background-color: $bg-btn-warning;
+              color: $text-dark-c0;
+              transition: all .5s;
+
+              &:hover {
+                background-color: $bg-btnhover-warning;
+                color: $text-light-c0;
+
+              }
             }
           }
         }
@@ -190,6 +224,69 @@ li {
     button {}
   }
 }
+
+/* PRODUCT*/
+.product {
+  .container {
+
+    h1 {
+      font-size: 46px;
+      font-weight: $fw-semi;
+    }
+
+    .row {
+      .col {
+        .card {
+          min-height: 550px;
+
+          img {}
+
+          .card-body {
+
+
+            h3 {
+              font-size: 24px;
+              font-weight: $fw-regular;
+              margin-bottom: 25px;
+            }
+
+            p {
+              color: $text-light-c1;
+            }
+          }
+
+          .card-bottom {
+
+
+            .card-btn {
+              width: 60%;
+
+              button {
+                padding: 10px 0;
+                border: none;
+                background-color: $bg-btn-warning;
+                transition: all .5s;
+
+                &:hover {
+                  background-color: $bg-btnhover-warning;
+                  color: $text-light-c0;
+                }
+              }
+            }
+
+            .card-price {
+              width: 40%;
+              padding: 10px 0;
+              background-color: $bg-light-c3;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* FOOTER */
 .footer {
@@ -206,9 +303,10 @@ li {
         .col-4 {
           margin: 20px 0;
 
-          h4 {
-            font-weight: 700;
-            font-size: 20px;
+          h3 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 20px;
           }
 
           ul {
@@ -216,8 +314,8 @@ li {
 
             li {
               a {
-                font-size: 13px;
-                font-weight: 400;
+                font-size: $fs-2;
+                font-weight: $fw-regular;
                 text-decoration: none;
                 color: $text-dark-c0;
               }
@@ -229,17 +327,18 @@ li {
           margin: 20px 0;
 
           p {
-            font-size: 13px;
-            font-weight: 400;
-            margin-bottom: 8px;
+            font-size: $fs-2;
+            font-weight: $fw-regular;
+            margin-bottom: 15px;
           }
 
           a {
             text-decoration: none;
             color:
               #dc908c;
-            font-size: 13px;
-            font-weight: 400;
+            font-size: $fs-2;
+            font-weight: $fw-regular;
+
           }
         }
       }

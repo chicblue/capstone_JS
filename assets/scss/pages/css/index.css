@@ -62,6 +62,8 @@ li {
   font-size: 20px;
   line-height: 24px;
   font-weight: 300;
+}
+.menu-shoes .container-fluid .menu-content ul li .menu-opacity {
   opacity: 0.7;
 }
 
@@ -113,29 +115,72 @@ li {
   margin: 0 auto;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-img {
-  width: 70%;
+  width: 55%;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title {
-  width: 30%;
+  width: 45%;
   margin-top: 165px;
+  padding-right: 60px;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title h3 {
   font-style: normal;
-  font-weight: 300;
-  font-size: 40px;
-  line-height: 48px;
+  font-weight: 600;
+  font-size: 36px;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title p {
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title button {
   width: 150px;
   height: 50px;
   margin-top: 15px;
+  background-color: #e1b067;
+  color: #000;
+  transition: all 0.5s;
 }
+.my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title button:hover {
+  background-color: #9b5e03;
+  color: #fff;
+}
+/* PRODUCT*/
+.product .container h1 {
+  font-size: 46px;
+  font-weight: 600;
+}
+.product .container .row .col .card {
+  min-height: 550px;
+}
+.product .container .row .col .card .card-body h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.product .container .row .col .card .card-body p {
+  color: #b7b4b4;
+}
+.product .container .row .col .card .card-bottom .card-btn {
+  width: 60%;
+}
+.product .container .row .col .card .card-bottom .card-btn button {
+  padding: 10px 0;
+  border: none;
+  background-color: #e1b067;
+  transition: all 0.5s;
+}
+.product .container .row .col .card .card-bottom .card-btn button:hover {
+  background-color: #9b5e03;
+  color: #fff;
+}
+.product .container .row .col .card .card-bottom .card-price {
+  width: 40%;
+  padding: 10px 0;
+  background-color: #dedddc;
+  font-weight: 600;
+}
+
 /* FOOTER */
 .footer .container-fluid {
   padding: 0;
@@ -148,9 +193,10 @@ li {
 .footer .container-fluid .footer-content .row .col-4 {
   margin: 20px 0;
 }
-.footer .container-fluid .footer-content .row .col-4 h4 {
-  font-weight: 700;
-  font-size: 20px;
+.footer .container-fluid .footer-content .row .col-4 h3 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .footer .container-fluid .footer-content .row .col-4 ul {
   list-style: none;
@@ -167,7 +213,7 @@ li {
 .footer .container-fluid .footer-content .row .items-2 p {
   font-size: 13px;
   font-weight: 400;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 .footer .container-fluid .footer-content .row .items-2 a {
   text-decoration: none;
