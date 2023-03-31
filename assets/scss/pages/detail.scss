@@ -1,0 +1,49 @@
+@import '../themes/_varible';
+@import'../themes/_mixin';
+
+.detail{
+    .container{
+        display: flex;
+        align-items: flex-start;
+        min-height: 47.2rem;
+        .detail_img{
+            width: $detail-img-width;
+            text-align: center;
+            & > img {
+                width: 34rem;
+                height: 34rem;
+                object-fit: contain;
+                object-position: center;
+                background-color: $bg-light-c2;
+                padding: 4rem;
+              }
+        }
+        .detail_content{
+            width: calc(100% - $detail-img-width);
+            padding: 0 10rem;
+            .detail__name {
+                @include text($fz-mxl, $lh: $lh-xl);
+                margin-bottom: 1rem;
+              }
+              .detail__decription {
+                @include text($fz: $fz-md, $fw: $fw-regular, $lh: $lh-sm, $c: $text-dark-c2);
+                margin-bottom: 2rem;
+                .detail__label-size {
+                    @include text($fz: $fz-xl, $fw: $fw-medium, $lh: $lh-lg, $c: $text-green-c0);
+                    margin-bottom: 2rem;
+                  }
+              }
+            
+              .detail__price {
+                @include text($fz-mxl, $fw: $fw-semibold, $lh: $lh-xl, $c: $text-red-c0);
+                margin-bottom: 2rem;
+              }
+            
+         
+    }
+}
+}
+
+
+
+
