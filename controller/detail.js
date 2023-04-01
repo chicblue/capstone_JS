@@ -1,10 +1,11 @@
-
-function renderDetail(data){
-    let htmlString='';
-    let sizeString = data.size.map((size) => {
-        return `<li class="detail__size">${size}</li>`;
-    }).join('');
-    htmlString+=`
+function renderDetail(data) {
+  let htmlString = "";
+  let sizeString = data.size
+    .map((size) => {
+      return `<li class="detail__size">${size}</li>`;
+    })
+    .join("");
+  htmlString += `
     <div class="detail__img">
         <img src="${data.image}">
     </div>
@@ -24,21 +25,20 @@ function renderDetail(data){
         </div>
         <button class="detail__add-btn">Add to cart</button>
     </div>
-    `
-    document.querySelector('.detail .container').innerHTML = htmlString;
-    return htmlString;
+    `;
+  document.querySelector(".detail .container").innerHTML = htmlString;
+  return htmlString;
 }
 
-function getProductDeltail(){
-
-    let param = new URL(window.location.href)
-    let thamSo = param.searchParams.get('id')
-    let promise = axios({
-        url:`https://shop.cyberlearn.vn/api/Product/getbyid?id=${thamSo}`,
-        method: 'GET'
-    })
-    promise.then(function(res){
-        renderDetail(res.data.content)
-    })
+function getProductDeltail() {
+  let param = new URL(window.location.href);
+  let thamSo = param.searchParams.get("id");
+  let promise = axios({
+    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${thamSo}`,
+    method: "GET",
+  });
+  promise.then(function (res) {
+    renderDetail(res.data.content);
+  });
 }
 getProductDeltail();
