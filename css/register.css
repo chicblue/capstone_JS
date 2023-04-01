@@ -39,6 +39,9 @@ body {
   color: rgba(0, 0, 0, 0.87);
   padding: 20px 35px;
 }
+.ctrlqFormContentWrapper .ctrlqCenteredContent .ctrlqFormCard .ctrlqFormContent form .row .danger {
+  color: red;
+}
 
 [type=radio]:not(:checked), [type=radio]:checked {
   position: relative;
