@@ -12,7 +12,8 @@ function renderProduct(arrProduct) {
             </div>
             <div class="card-bottom d-flex jusstify-content-around align-items-center">
               <div class="card-btn">
-                <button class="btn-warning w-100">Buy now</button>
+              <a href="./detail.html?id=${prod.id}" class="btn-warning w-100 d-inline-block text-center">Buy now</a>
+                
               </div>
               <div class="card-price text-center">
                 ${prod.price}

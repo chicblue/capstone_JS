@@ -164,13 +164,14 @@ li {
 .product .container .row .col .card .card-bottom .card-btn {
   width: 60%;
 }
-.product .container .row .col .card .card-bottom .card-btn button {
+.product .container .row .col .card .card-bottom .card-btn a {
   padding: 10px 0;
   border: none;
   background-color: #e1b067;
   transition: all 0.5s;
+  text-decoration: none;
 }
-.product .container .row .col .card .card-bottom .card-btn button:hover {
+.product .container .row .col .card .card-bottom .card-btn a:hover {
   background-color: #9b5e03;
   color: #fff;
 }
