@@ -21,10 +21,10 @@ function renderProductDetail(arrProductDetail) {
   for (var index = 0; index < arrProductDetail.length; index++) {
     var prodD = arrProductDetail[index];
     htmlString += `
-    <div class="col-6 avable ${prodD.id}">
+    <div class="col-5 avable ${prodD.id}">
     <img src="${prodD.image}" alt="">
 </div>
-<div class="col-6">
+<div class="col-7">
     <h3>
         ${prodD.name}
     </h3>
@@ -40,9 +40,14 @@ function renderProductDetail(arrProductDetail) {
         <button>${prodD.size[4]}</button>
         <button>${prodD.size[5]}</button>
     </div>
-    <h1>${prodD.price}</h1>
-    <p>Số lượng ${prodD.quantity} </p>
-    <button>Add to cart</button>
+    <h1>$ ${prodD.price}</h1>
+    <p>Số lượng  ${prodD.quantity} </p>
+    <div class="btn-increase">
+        <button class="btn increase"  >+</button>
+        <input type="text" value="1" id="number">
+        <button class="btn reduce">-</button>
+    </div>
+    <button class="btn btn-add">Add to cart</button>
 </div>
     `;
   }

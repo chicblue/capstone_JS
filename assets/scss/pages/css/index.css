@@ -1,72 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  font-family: "Inter", sans-serif;
-}
-
-ul,
-li {
-  padding: 0;
-  margin: 0;
-}
-
-/* HEADER */
-.header .container-fluid {
-  background-color: #000;
-}
-.header .container-fluid .header-content {
-  height: 50px;
-  width: 95%;
-  margin: 0 auto;
-}
-.header .container-fluid .header-content .header-logo img {
-  height: 32px;
-  width: 116px;
-}
-.header .container-fluid .header-content .header-right ul li {
-  display: inline;
-  margin-left: 10px;
-}
-.header .container-fluid .header-content .header-right ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-}
-.header .container-fluid .header-content .header-right ul li a img {
-  width: 31px;
-  height: 31px;
-}
-
-/* MENU */
-.menu-shoes .container-fluid .menu-content {
-  width: 95%;
-  margin: 0 auto;
-  height: 50px;
-}
-.menu-shoes .container-fluid .menu-content ul {
-  list-style: none;
-}
-.menu-shoes .container-fluid .menu-content ul li {
-  margin-right: 25px;
-  display: inline;
-}
-.menu-shoes .container-fluid .menu-content ul li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 300;
-}
-.menu-shoes .container-fluid .menu-content ul li .menu-opacity {
-  opacity: 0.7;
-}
-
 /* CAROUSEL */
 .my-carousel .carousel {
   overflow: hidden;
@@ -133,98 +64,106 @@ li {
   font-size: 16px;
   line-height: 24px;
 }
-.my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title button {
+.my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a {
   width: 150px;
   height: 50px;
-  margin-top: 15px;
+  padding: 10px;
   background-color: #e1b067;
   color: #000;
   transition: all 0.5s;
 }
-.my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title button:hover {
+.my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a:hover {
   background-color: #9b5e03;
   color: #fff;
 }
-/* PRODUCT*/
-.product .container h1 {
-  font-size: 46px;
-  font-weight: 600;
-}
-.product .container .row .col .card {
-  min-height: 550px;
-}
-.product .container .row .col .card .card-body h3 {
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 25px;
-}
-.product .container .row .col .card .card-body p {
-  color: #b7b4b4;
-}
-.product .container .row .col .card .card-bottom .card-btn {
-  width: 60%;
-}
-.product .container .row .col .card .card-bottom .card-btn a {
-  padding: 10px 0;
-  border: none;
-  background-color: #e1b067;
-  transition: all 0.5s;
-  text-decoration: none;
-}
-.product .container .row .col .card .card-bottom .card-btn a:hover {
-  background-color: #9b5e03;
-  color: #fff;
-}
-.product .container .row .col .card .card-bottom .card-price {
-  width: 40%;
-  padding: 10px 0;
-  background-color: #dedddc;
-  font-weight: 600;
-}
-
-/* FOOTER */
-.footer .container-fluid {
+/* PRODUCT */
+.product .container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
-.footer .container-fluid .footer-content .row {
-  margin-top: 10px;
-  width: 85%;
-  margin: 0 auto;
+.product .container .cards .cards-item {
+  display: flex;
+  padding: 1rem;
 }
-.footer .container-fluid .footer-content .row .col-4 {
-  margin: 20px 0;
+@media (min-width: 40rem) {
+  .product .container .cards .cards-item {
+    width: 50%;
+  }
 }
-.footer .container-fluid .footer-content .row .col-4 h3 {
-  font-weight: 600;
-  font-size: 24px;
+@media (min-width: 56rem) {
+  .product .container .cards .cards-item {
+    width: 25%;
+  }
+}
+.product .container .cards .cards-item .card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.product .container .cards .cards-item .card:hover .card__image {
+  filter: contrast(100%);
+}
+.product .container .cards .cards-item .card .card-image {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.product .container .cards .cards-item .card .card-image::before {
+  content: "";
+  display: block;
+}
+.product .container .cards .cards-item .card .card-image img {
+  height: auto;
+  max-width: 80%;
+  vertical-align: middle;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.product .container .cards .card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.product .container .cards .card-content .card-title {
+  font-size: 22px;
+  font-weight: 400;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
-.footer .container-fluid .footer-content .row .col-4 ul {
-  list-style: none;
+.product .container .cards .card-content .card-text {
+  flex: 1 1 auto;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  color: #b7b4b4;
 }
-.footer .container-fluid .footer-content .row .col-4 ul li a {
-  font-size: 13px;
-  font-weight: 400;
+.product .container .cards .cards-footer {
+  background-color: #dedddc;
+}
+.product .container .cards .cards-footer a {
+  width: 60%;
   text-decoration: none;
-  color: #000;
+  background-color: #e1b067;
+  border-radius: 0;
+  transition: all 0.5s;
+  padding: 15px 0;
+  font-size: 18px;
 }
-.footer .container-fluid .footer-content .row .items-2 {
-  margin: 20px 0;
+.product .container .cards .cards-footer a:hover {
+  background-color: #9b5e03;
+  color: #fff;
 }
-.footer .container-fluid .footer-content .row .items-2 p {
-  font-size: 13px;
-  font-weight: 400;
-  margin-bottom: 15px;
-}
-.footer .container-fluid .footer-content .row .items-2 a {
-  text-decoration: none;
-  color: #dc908c;
-  font-size: 13px;
-  font-weight: 400;
-}
-.footer .container-fluid .footer-content .row-bottom .items-2 {
-  margin: 40px 0;
-}
-.footer .container-fluid .content-bottom {
-  background-color: #ececec;
+.product .container .cards .cards-footer span {
+  width: 40%;
+  font-weight: 600;
 }

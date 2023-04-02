@@ -3,27 +3,24 @@ function renderProduct(arrProduct) {
   for (var index = 0; index < arrProduct.length; index++) {
     var prod = arrProduct[index];
     htmlString += `
-    <div class="col col-sm-6 col-lg-3 col-12 p-3">
+    <li class="cards-item">
           <div class="card">
-            <img src="${prod.image}" class="card-img-top" alt="...style:w-100%">
-            <div class="card-body">
-              <h3 class="">${prod.name}</h3>
+            <div class="card-image">
+              <img src="${prod.image}" alt="">
+            </div>
+            <div class="card-content">
+              <div class="card-title">${prod.name}</div>
               <p class="card-text">${prod.description}</p>
             </div>
-            <div class="card-bottom d-flex jusstify-content-around align-items-center">
-              <div class="card-btn">
-              <a href="./detail.html?id=${prod.id}" class="btn-warning w-100 d-inline-block text-center">Buy now</a>
-                
-              </div>
-              <div class="card-price text-center">
-                ${prod.price}
-              </div>
+            <div class="cards-footer d-flex justify-content-around align-items-center">
+              <a href="./detail.html?id=${prod.id}" class="btn">Buy now</a>
+              <span class="text-center">$${prod.price}</span>
             </div>
           </div>
-        </div>
+        </li>
         `;
   }
-  document.querySelector("#products .row").innerHTML = htmlString;
+  document.querySelector("#products .cards").innerHTML = htmlString;
   return htmlString;
 }
 

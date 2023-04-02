@@ -1,3 +1,31 @@
+// text--color
+$text-light-c0: #fff;
+$text-light-c1: #b7b4b4;
+$text-dark-c0: #000;
+// Background--color
+$bg-light-c0: #fff;
+$bg-dark-c0: #000;
+$bg-light-c1: #ececec;
+$bg-light-c2: #f8f8f8;
+$bg-light-c3: #dedddc;
+
+//font-size:
+$fs-1: 12px;
+$fs-2: 13px;
+$fs-3: 16px;
+$fs-4: 18px;
+$fs-5: 20px;
+$fs-6: 22px;
+//font-weight:
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semi: 600;
+$fw-bold: 700;
+//Button:
+$bg-btn-warning: #e1b067;
+$bg-btnhover-warning: #9b5e03;
+
+
 /* CAROUSEL */
 .my-carousel {
   .carousel {
@@ -83,10 +111,10 @@
               line-height: 24px;
             }
 
-            button {
+            a {
               width: 150px;
               height: 50px;
-              margin-top: 15px;
+              padding: 10px;
               background-color: $bg-btn-warning;
               color: $text-dark-c0;
               transition: all .5s;
@@ -106,65 +134,127 @@
   }
 }
 
-/* PRODUCT*/
+/* PRODUCT */
 .product {
   .container {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-    h1 {
-      font-size: 46px;
-      font-weight: $fw-semi;
-    }
+      .cards-item {
+        display: flex;
+        padding: 1rem;
 
-    .row {
-      .col {
+        @media(min-width: 40rem) {
+          width: 50%;
+        }
+
+        @media(min-width: 56rem) {
+          width: 25%;
+        }
+
         .card {
-          min-height: 550px;
+          background-color: white;
+          border-radius: 0.25rem;
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
 
-          img {}
-
-          .card-body {
-
-
-            h3 {
-              font-size: 24px;
-              font-weight: $fw-regular;
-              margin-bottom: 25px;
-            }
-
-            p {
-              color: $text-light-c1;
+          &:hover {
+            .card__image {
+              filter: contrast(100%);
             }
           }
 
-          .card-bottom {
+          .card-image {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+            filter: contrast(70%);
+            //filter: saturate(180%);
+            overflow: hidden;
+            position: relative;
+            transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+            ;
 
-
-            .card-btn {
-              width: 60%;
-
-              a {
-                padding: 10px 0;
-                border: none;
-                background-color: $bg-btn-warning;
-                transition: all .5s;
-                text-decoration: none;
-
-                &:hover {
-                  background-color: $bg-btnhover-warning;
-                  color: $text-light-c0;
-                }
-              }
+            &::before {
+              content: "";
+              display: block;
+              // padding-top: 56.25%; // 16:9 aspect ratio
             }
 
-            .card-price {
-              width: 40%;
-              padding: 10px 0;
-              background-color: $bg-light-c3;
-              font-weight: 600;
+            @media(min-width: 40rem) {
+              // &::before {
+              //   padding-top: 66.6%; // 3:2 aspect ratio
+              // }
+            }
+
+            img {
+              height: auto;
+              max-width: 80%;
+              vertical-align: middle;
+              margin-left: 50%;
+              transform: translateX(-50%);
             }
           }
         }
       }
+
+      .card-content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 1rem;
+
+        .card-title {
+          font-size: 22px;
+          font-weight: 400;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+
+        .card-text {
+          flex: 1 1 auto;
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 1.25rem;
+          color: $text-light-c1;
+        }
+
+
+      }
+
+      .cards-footer {
+        background-color: $bg-light-c3;
+
+
+        a {
+          width: 60%;
+          text-decoration: none;
+          background-color: $bg-btn-warning;
+          border-radius: 0;
+          transition: all .5s;
+          padding: 15px 0;
+          font-size: 18px;
+
+          &:hover {
+            background-color: $bg-btnhover-warning;
+            color: $text-light-c0;
+          }
+        }
+
+        span {
+          width: 40%;
+          font-weight: $fw-semi;
+
+        }
+      }
     }
   }
+
+
+
 }
