@@ -7,12 +7,17 @@
 html,
 body {
   font-family: "Inter", sans-serif;
+  background-color: #f8f8f8;
 }
 
 ul,
 li {
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* HEADER */
@@ -33,10 +38,14 @@ li {
   margin-left: 10px;
 }
 .header .container-fluid .header-content .header-right ul li a {
-  text-decoration: none;
-  color: #fff;
   font-size: 16px;
   font-weight: 300;
+  line-height: 0;
+  color: #fff;
+  transition: all 0.5s;
+}
+.header .container-fluid .header-content .header-right ul li a:hover {
+  color: #009688;
 }
 .header .container-fluid .header-content .header-right ul li a img {
   width: 31px;
@@ -57,11 +66,25 @@ li {
   display: inline;
 }
 .menu-shoes .container-fluid .menu-content ul li a {
-  text-decoration: none;
-  color: #000;
   font-size: 20px;
-  line-height: 24px;
   font-weight: 300;
+  line-height: 24px;
+  color: #000;
+  position: relative;
+}
+.menu-shoes .container-fluid .menu-content ul li a::after {
+  content: "";
+  transform: scale(0, 1);
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.5s;
+}
+.menu-shoes .container-fluid .menu-content ul li a:hover::after {
+  transform: scale(1, 1);
 }
 .menu-shoes .container-fluid .menu-content ul li .menu-opacity {
   opacity: 0.7;
@@ -90,7 +113,7 @@ li {
 .footer .container-fluid .footer-content .row .col-4 ul li a {
   font-size: 13px;
   font-weight: 400;
-  text-decoration: none;
+  line-height: 0;
   color: #000;
 }
 .footer .container-fluid .footer-content .row .items-2 {
@@ -102,14 +125,19 @@ li {
   margin-bottom: 15px;
 }
 .footer .container-fluid .footer-content .row .items-2 a {
-  text-decoration: none;
-  color: #dc908c;
   font-size: 13px;
   font-weight: 400;
+  line-height: 0;
+  color: #dc908c;
+  transition: all 0.5s;
+}
+.footer .container-fluid .footer-content .row .items-2 a:hover {
+  color: #d9625c;
+  font-weight: 600;
 }
 .footer .container-fluid .footer-content .row-bottom .items-2 {
   margin: 40px 0;
 }
 .footer .container-fluid .content-bottom {
-  background-color: #ececec;
+  background-color: #dedddc;
 }

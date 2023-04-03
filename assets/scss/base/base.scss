@@ -1,29 +1,7 @@
-// text--color
-$text-light-c0: #fff;
-$text-light-c1: #b7b4b4;
-$text-dark-c0: #000;
-// Background--color
-$bg-light-c0: #fff;
-$bg-dark-c0: #000;
-$bg-light-c1: #ececec;
-$bg-light-c2: #f8f8f8;
-$bg-light-c3: #dedddc;
+@import '../themes/varible.scss';
+@import '../themes/mixin.scss';
 
-//font-size:
-$fs-1: 12px;
-$fs-2: 13px;
-$fs-3: 16px;
-$fs-4: 18px;
-$fs-5: 20px;
-$fs-6: 22px;
-//font-weight:
-$fw-light: 300;
-$fw-regular: 400;
-$fw-semi: 600;
-$fw-bold: 700;
-//Button:
-$bg-btn-warning: #e1b067;
-$bg-btnhover-warning: #9b5e03;
+
 
 * {
     margin: 0;
@@ -35,12 +13,17 @@ $bg-btnhover-warning: #9b5e03;
 html,
 body {
     font-family: 'Inter', sans-serif;
+    background-color: $bg-light-c2;
 }
 
 ul,
 li {
     padding: 0;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* HEADER */
@@ -67,10 +50,12 @@ li {
                         margin-left: 10px;
 
                         a {
-                            text-decoration: none;
-                            color: $text-light-c0;
-                            font-size: $fs-3;
-                            font-weight: $fw-light;
+                            @include text($fs-3, $fw-light, 0, $text-light-c0 );
+                            transition: all .5s;
+
+                            &:hover {
+                                color: #009688;
+                            }
 
                             img {
                                 width: 31px;
@@ -100,11 +85,26 @@ li {
                     display: inline;
 
                     a {
-                        text-decoration: none;
-                        color: $text-dark-c0;
-                        font-size: 20px;
-                        line-height: 24px;
-                        font-weight: $fw-light;
+                        @include text($fs-5, $fw-light, 24px, $text-dark-c0);
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            transform: scale(0, 1);
+                            width: 100%;
+                            height: 3px;
+                            background-color: red;
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            transition: all .5s;
+
+
+                        }
+
+                        &:hover::after {
+                            transform: scale(1, 1);
+                        }
 
                     }
 
@@ -143,10 +143,7 @@ li {
 
                         li {
                             a {
-                                font-size: $fs-2;
-                                font-weight: $fw-regular;
-                                text-decoration: none;
-                                color: $text-dark-c0;
+                                @include text($fs-2, $fw-regular, 0, $text-dark-c0)
                             }
                         }
                     }
@@ -162,12 +159,13 @@ li {
                     }
 
                     a {
-                        text-decoration: none;
-                        color:
-                            #dc908c;
-                        font-size: $fs-2;
-                        font-weight: $fw-regular;
+                        @include text($fs-2, $fw-regular, 0, #dc908c);
+                        transition: all .5s;
 
+                        &:hover {
+                            color: #d9625c;
+                            font-weight: $fw-semibold;
+                        }
                     }
                 }
             }

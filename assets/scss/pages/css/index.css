@@ -59,10 +59,10 @@
   font-size: 36px;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title p {
-  font-style: normal;
-  font-weight: 300;
   font-size: 16px;
+  font-weight: 300;
   line-height: 24px;
+  color: #000;
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a {
   width: 150px;
@@ -75,6 +75,7 @@
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a:hover {
   background-color: #9b5e03;
   color: #fff;
+  font-weight: 600;
 }
 /* PRODUCT */
 .product .container .cards {
@@ -148,11 +149,10 @@
   color: #b7b4b4;
 }
 .product .container .cards .cards-footer {
-  background-color: #dedddc;
+  background-color: #cccccc;
 }
 .product .container .cards .cards-footer a {
   width: 60%;
-  text-decoration: none;
   background-color: #e1b067;
   border-radius: 0;
   transition: all 0.5s;
@@ -162,6 +162,7 @@
 .product .container .cards .cards-footer a:hover {
   background-color: #9b5e03;
   color: #fff;
+  font-weight: 600;
 }
 .product .container .cards .cards-footer span {
   width: 40%;

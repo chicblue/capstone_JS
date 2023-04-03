@@ -1,30 +1,5 @@
-// text--color
-$text-light-c0: #fff;
-$text-light-c1: #b7b4b4;
-$text-dark-c0: #000;
-// Background--color
-$bg-light-c0: #fff;
-$bg-dark-c0: #000;
-$bg-light-c1: #ececec;
-$bg-light-c2: #f8f8f8;
-$bg-light-c3: #dedddc;
-
-//font-size:
-$fs-1: 12px;
-$fs-2: 13px;
-$fs-3: 16px;
-$fs-4: 18px;
-$fs-5: 20px;
-$fs-6: 22px;
-//font-weight:
-$fw-light: 300;
-$fw-regular: 400;
-$fw-semi: 600;
-$fw-bold: 700;
-//Button:
-$bg-btn-warning: #e1b067;
-$bg-btnhover-warning: #9b5e03;
-
+@import '../themes/varible.scss';
+@import '../themes/mixin.scss';
 
 /* CAROUSEL */
 .my-carousel {
@@ -66,8 +41,6 @@ $bg-btnhover-warning: #9b5e03;
       }
     }
 
-
-
     .carousel-inner {
       .carousel-item {
         position: relative;
@@ -99,16 +72,13 @@ $bg-btnhover-warning: #9b5e03;
 
             h3 {
               font-style: normal;
-              font-weight: $fw-semi;
+              font-weight: $fw-semibold;
               font-size: 36px;
 
             }
 
             p {
-              font-style: normal;
-              font-weight: $fw-light;
-              font-size: $fs-3;
-              line-height: 24px;
+              @include text($fs-3, $fw-light, 24px, $text-dark-c0)
             }
 
             a {
@@ -122,6 +92,7 @@ $bg-btnhover-warning: #9b5e03;
               &:hover {
                 background-color: $bg-btnhover-warning;
                 color: $text-light-c0;
+                font-weight: $fw-semibold;
 
               }
             }
@@ -233,7 +204,6 @@ $bg-btnhover-warning: #9b5e03;
 
         a {
           width: 60%;
-          text-decoration: none;
           background-color: $bg-btn-warning;
           border-radius: 0;
           transition: all .5s;
@@ -243,12 +213,13 @@ $bg-btnhover-warning: #9b5e03;
           &:hover {
             background-color: $bg-btnhover-warning;
             color: $text-light-c0;
+            font-weight: $fw-semibold;
           }
         }
 
         span {
           width: 40%;
-          font-weight: $fw-semi;
+          font-weight: $fw-semibold;
 
         }
       }

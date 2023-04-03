@@ -1,35 +1,11 @@
-// text--color
-$text-light-c0: #fff;
-$text-light-c1: #b7b4b4;
-$text-dark-c0: #000;
-// Background--color
-$bg-light-c0: #fff;
-$bg-dark-c0: #000;
-$bg-light-c1: #ececec;
-$bg-light-c2: #f8f8f8;
-$bg-light-c3: #dedddc;
+@import '../themes/varible.scss';
+@import '../themes/mixin.scss';
 
-//font-size:
-$fs-1: 12px;
-$fs-2: 13px;
-$fs-3: 16px;
-$fs-4: 18px;
-$fs-5: 20px;
-$fs-6: 22px;
-//font-weight:
-$fw-light: 300;
-$fw-regular: 400;
-$fw-semi: 600;
-$fw-bold: 700;
-//Button:
-$bg-btn-warning: #e1b067;
-$bg-btnhover-warning: #9b5e03;
 
 .detail-product {
     margin-top: 58px;
 
     .container {
-
 
         .row {
             .col-5 {
@@ -48,14 +24,11 @@ $bg-btnhover-warning: #9b5e03;
                 }
 
                 p {
-                    font-size: $fs-3;
-                    font-weight: $fw-regular;
+                    @include text($fs-3, $fw-regular, 19.36px, $text-dark-c0)
                 }
 
                 h4 {
-                    color: #1ED90E;
-                    font-size: 24px;
-                    font-weight: 600;
+                    @include text($fs-7, $fw-medium, 29.05px, #1ED90E)
                 }
 
                 .btn-size {
@@ -69,9 +42,7 @@ $bg-btnhover-warning: #9b5e03;
                 }
 
                 h1 {
-                    font-size: 30px;
-                    font-weight: $fw-semi;
-                    color: #FC0303;
+                    @include text(30px, $fw-semibold, 36.31px, #FC0303);
                     margin-top: 17px;
                 }
 
@@ -84,7 +55,7 @@ $bg-btnhover-warning: #9b5e03;
                     .reduce {
                         width: 50px;
                         height: 50px;
-                        background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+                        background: $bg-gra-c0;
                         font-size: 24px;
                     }
 
@@ -103,12 +74,13 @@ $bg-btnhover-warning: #9b5e03;
                     color: $text-light-c0;
                     width: 150px;
                     height: 50px;
-                    background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
-                    background-position: left center;
+                    background: $bg-gra-c1;
                     transition: all .5s;
+                    background-size: 100%;
 
                     &:hover {
-                        background-position: right center;
+                        background-size: 300%;
+                        background-position: left center;
                     }
                 }
 
@@ -217,7 +189,6 @@ $bg-btnhover-warning: #9b5e03;
 
                 a {
                     width: 60%;
-                    text-decoration: none;
                     background-color: $bg-btn-warning;
                     border-radius: 0;
                     transition: all .5s;
@@ -227,12 +198,13 @@ $bg-btnhover-warning: #9b5e03;
                     &:hover {
                         background-color: $bg-btnhover-warning;
                         color: $text-light-c0;
+                        font-weight: $fw-semibold;
                     }
                 }
 
                 span {
                     width: 40%;
-                    font-weight: $fw-semi;
+                    font-weight: $fw-semibold;
 
                 }
             }
