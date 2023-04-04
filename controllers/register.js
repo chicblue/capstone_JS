@@ -57,8 +57,10 @@ function getRegister(post) {
   });
   promise.then(function (data) {
     console.log(data);
+    alert('Succeed')
   });
   promise.catch(function (err) {
     console.log(err);
+    alert('Failed')
   });
 }
