@@ -25,12 +25,20 @@ body {
         margin: auto;
         width: 600px;
 
+        @media screen and (max-width:576px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
+
         .ctrlqFormCard {
             background-color: #fff;
             margin-bottom: 48px;
             -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
             box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
             word-wrap: break-word;
+
 
             &:first-of-type {
                 margin-top: -100px;

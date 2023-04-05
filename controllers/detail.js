@@ -22,7 +22,9 @@ function renderProductDetail(arrProductDetail) {
     var prodD = arrProductDetail[index];
     htmlString += `
     <div class="col-5 avable ${prodD.id}">
-    <img src="${prodD.image}" alt="">
+    <div class="detail-img">
+    <img src="${prodD.image}" alt=""></div>
+    <div class="bg-img"><img src="/assets/img/1f7d6dc51c906c5fe36980662974d571.jpeg" alt=""></div>
 </div>
 <div class="col-7">
     <h3>
@@ -41,11 +43,11 @@ function renderProductDetail(arrProductDetail) {
         <button>${prodD.size[5]}</button>
     </div>
     <h1>$ ${prodD.price}</h1>
-    <p>Số lượng  ${prodD.quantity} </p>
+    <p class="detail-quantity">Số lượng ${prodD.quantity} </p>
     <div class="btn-increase">
-        <button class="btn increase"  >+</button>
+        <button class="btn increase" onclick="increase()">+</button>
         <input type="text" value="1" id="number">
-        <button class="btn reduce">-</button>
+        <button class="btn reduce" onclick="reduce()">-</button>
     </div>
     <button class="btn btn-add">Add to cart</button>
 </div>
@@ -54,3 +56,17 @@ function renderProductDetail(arrProductDetail) {
   document.querySelector("#proDetail").innerHTML = htmlString;
   return htmlString;
 }
+
+let numberElement = document.getElementById("number");
+let number = numberElement.value;
+let render = (number) => {
+  numberElement.value = number;
+};
+let increase = () => {
+  number++;
+  render(number);
+};
+let reduce = () => {
+  number--;
+  render(number);
+};

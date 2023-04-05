@@ -2,6 +2,11 @@
 .my-carousel .carousel {
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-indicators {
+    margin-bottom: 0px;
+  }
+}
 .my-carousel .carousel .carousel-indicators [data-bs-target] {
   width: 10px;
   height: 10px;
@@ -11,6 +16,17 @@
   left: -50px;
   top: -30px;
 }
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-control-prev {
+    top: -30px;
+    left: -37px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-control-prev {
+    left: -30px;
+  }
+}
 .my-carousel .carousel .carousel-control-prev .carousel-control-prev-icons {
   background-image: url(/assets/img/Polygon\ 2.png);
   background-size: cover;
@@ -18,9 +34,32 @@
   width: 40px;
   height: 60px;
 }
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-control-prev .carousel-control-prev-icons {
+    width: 30px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-control-prev .carousel-control-prev-icons {
+    width: 25px;
+    height: 40px;
+  }
+}
 .my-carousel .carousel .carousel-control-next {
   top: -30px;
   right: -60px;
+}
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-control-next {
+    top: -30px;
+    right: -30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-control-next {
+    right: -25px;
+  }
 }
 .my-carousel .carousel .carousel-control-next .carousel-control-next-icons {
   background: url(/assets/img/Polygon\ 1.png);
@@ -29,11 +68,33 @@
   width: 40px;
   height: 60px;
 }
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-control-next .carousel-control-next-icons {
+    width: 30px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 576px) {
+  .my-carousel .carousel .carousel-control-next .carousel-control-next-icons {
+    width: 25px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner {
+    padding-top: 30px;
+  }
+}
 .my-carousel .carousel .carousel-inner .carousel-item {
   position: relative;
 }
 .my-carousel .carousel .carousel-inner .carousel-item img {
-  margin-top: 170px;
+  margin-top: 110px;
+}
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-inner .carousel-item img {
+    margin-top: 20px;
+  }
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content {
   display: flex;
@@ -45,18 +106,57 @@
   width: 90%;
   margin: 0 auto;
 }
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content {
+    top: -30%;
+  }
+}
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-img {
   width: 55%;
 }
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-img {
+    width: 50%;
+  }
+}
+.my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-img img {
+  width: 90%;
+}
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-img img {
+    width: 90%;
+  }
+}
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title {
   width: 45%;
-  margin-top: 165px;
+  margin-top: 70px;
   padding-right: 60px;
+}
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title {
+    width: 50%;
+    padding-right: 20px;
+  }
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title h3 {
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
+}
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title h3 {
+    font-size: 20px;
+  }
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title p {
   font-size: 16px;
@@ -64,13 +164,32 @@
   line-height: 24px;
   color: #000;
 }
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title p {
+    font-size: 13px;
+  }
+}
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a {
-  width: 150px;
-  height: 50px;
-  padding: 10px;
+  padding: 12px 40px;
   background-color: #e1b067;
   color: #000;
   transition: all 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a {
+    padding: 6px 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a {
+    padding: 4px 15px;
+    font-size: 13px;
+  }
 }
 .my-carousel .carousel .carousel-inner .carousel-item .carousel-content .carousel-title a:hover {
   background-color: #9b5e03;
@@ -84,6 +203,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 576px) {
+  .product .container .cards {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .product .container .cards .cards-item {
   display: flex;

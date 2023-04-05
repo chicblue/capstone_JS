@@ -21,6 +21,10 @@ a {
 }
 
 /* HEADER */
+.header {
+  position: relative;
+  z-index: 100;
+}
 .header .container-fluid {
   background-color: #000;
 }
@@ -53,6 +57,10 @@ a {
 }
 
 /* MENU */
+.menu-shoes {
+  position: relative;
+  z-index: 100;
+}
 .menu-shoes .container-fluid .menu-content {
   width: 95%;
   margin: 0 auto;
@@ -107,37 +115,92 @@ a {
   font-size: 24px;
   margin-bottom: 20px;
 }
-.footer .container-fluid .footer-content .row .col-4 ul {
+@media screen and (max-width: 768px) {
+  .footer .container-fluid .footer-content .row .col-4 h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer .container-fluid .footer-content .row .col-4 h3 {
+    font-size: 18px;
+  }
+}
+.footer .container-fluid .footer-content .row ul {
   list-style: none;
 }
-.footer .container-fluid .footer-content .row .col-4 ul li a {
+.footer .container-fluid .footer-content .row ul li a {
   font-size: 13px;
   font-weight: 400;
   line-height: 0;
   color: #000;
 }
-.footer .container-fluid .footer-content .row .items-2 {
+.footer .container-fluid .footer-content .items-2 {
   margin: 20px 0;
 }
-.footer .container-fluid .footer-content .row .items-2 p {
+.footer .container-fluid .footer-content .items-2 p {
   font-size: 13px;
   font-weight: 400;
   margin-bottom: 15px;
 }
-.footer .container-fluid .footer-content .row .items-2 a {
+.footer .container-fluid .footer-content .items-2 a {
   font-size: 13px;
   font-weight: 400;
   line-height: 0;
   color: #dc908c;
   transition: all 0.5s;
 }
-.footer .container-fluid .footer-content .row .items-2 a:hover {
+.footer .container-fluid .footer-content .items-2 a:hover {
   color: #d9625c;
   font-weight: 600;
 }
-.footer .container-fluid .footer-content .row-bottom .items-2 {
+.footer .container-fluid .row-bottom .items-2 {
   margin: 40px 0;
 }
-.footer .container-fluid .content-bottom {
+.footer .content-bottom {
   background-color: #dedddc;
+}
+
+/* BACK TO TOP */
+#button {
+  display: inline-block;
+  background-color: rgb(75, 75, 226);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: -4px 4px 24px -10px #f55f8d;
+  z-index: 1000;
+}
+
+#button i {
+  line-height: 50px;
+  color: white;
+}
+
+#button::after {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
 }

@@ -21,6 +21,12 @@ body {
   margin: auto;
   width: 600px;
 }
+@media screen and (max-width: 576px) {
+  .ctrlqFormContentWrapper .ctrlqCenteredContent {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .ctrlqFormContentWrapper .ctrlqCenteredContent .ctrlqFormCard {
   background-color: #fff;
   margin-bottom: 48px;

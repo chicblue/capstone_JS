@@ -3,12 +3,20 @@
 
 /* CAROUSEL */
 .my-carousel {
+
+
   .carousel {
     .carousel-indicators {
+      @media screen and (max-width:768px) {
+        margin-bottom: 0px;
+      }
+
       [data-bs-target] {
         width: 10px;
         height: 10px;
         border-radius: 50%;
+
+
       }
     }
 
@@ -18,12 +26,31 @@
       left: -50px;
       top: -30px;
 
+      @media screen and (max-width:768px) {
+        top: -30px;
+        left: -37px;
+      }
+
+      @media screen and (max-width:576px) {
+        left: -30px;
+      }
+
       .carousel-control-prev-icons {
         background-image: url(/assets/img/Polygon\ 2.png);
         background-size: cover;
         background-repeat: no-repeat;
         width: 40px;
         height: 60px;
+
+        @media screen and (max-width:768px) {
+          width: 30px;
+          height: 50px;
+        }
+
+        @media screen and (max-width:576px) {
+          width: 25px;
+          height: 40px;
+        }
       }
     }
 
@@ -31,6 +58,15 @@
       top: -30px;
       right: -60px;
 
+      @media screen and (max-width:768px) {
+        top: -30px;
+        right: -30px;
+      }
+
+      @media screen and (max-width:576px) {
+
+        right: -25px;
+      }
 
       .carousel-control-next-icons {
         background: url(/assets/img/Polygon\ 1.png);
@@ -38,15 +74,33 @@
         background-repeat: no-repeat;
         width: 40px;
         height: 60px;
+
+        @media screen and (max-width:768px) {
+          width: 30px;
+          height: 50px;
+
+          @media screen and (max-width:576px) {
+            width: 25px;
+            height: 40px;
+          }
+        }
       }
     }
 
     .carousel-inner {
+      @media screen and (max-width:576px) {
+        padding-top: 30px;
+      }
+
       .carousel-item {
         position: relative;
 
         img {
-          margin-top: 170px;
+          margin-top: 110px;
+
+          @media screen and (max-width:768px) {
+            margin-top: 20px;
+          }
         }
 
         .carousel-content {
@@ -59,35 +113,83 @@
           width: 90%;
           margin: 0 auto;
 
+          @media screen and (max-width:576px) {
+            top: -30%;
+          }
+
           .carousel-img {
             width: 55%;
 
-            img {}
+            @media screen and (max-width:576px) {
+              width: 50%;
+            }
+
+            img {
+              width: 90%;
+
+              @media screen and (max-width:768px) {
+                width: 90%;
+              }
+            }
           }
 
           .carousel-title {
             width: 45%;
-            margin-top: 165px;
+            margin-top: 70px;
             padding-right: 60px;
+
+
+
+            @media screen and (max-width:768px) {
+              margin-top: 0px;
+            }
+
+            @media screen and (max-width:576px) {
+              width: 50%;
+              padding-right: 20px;
+            }
 
             h3 {
               font-style: normal;
               font-weight: $fw-semibold;
               font-size: 36px;
 
+              @media screen and (max-width:768px) {
+                font-size: $fs-6;
+              }
+
+              @media screen and (max-width:576px) {
+                font-size: $fs-5;
+              }
             }
 
             p {
-              @include text($fs-3, $fw-light, 24px, $text-dark-c0)
+              @include text($fs-3, $fw-light, 24px, $text-dark-c0);
+
+              @media screen and (max-width:768px) {
+                font-size: $fs-3;
+              }
+
+              @media screen and (max-width:576px) {
+                font-size: $fs-2;
+              }
             }
 
             a {
-              width: 150px;
-              height: 50px;
-              padding: 10px;
+
+              padding: 12px 40px;
               background-color: $bg-btn-warning;
               color: $text-dark-c0;
               transition: all .5s;
+
+              @media screen and (max-width:768px) {
+                padding: 6px 20px;
+              }
+
+              @media screen and (max-width:576px) {
+                padding: 4px 15px;
+                font-size: $fs-2;
+              }
 
               &:hover {
                 background-color: $bg-btnhover-warning;
@@ -114,6 +216,11 @@
       list-style: none;
       margin: 0;
       padding: 0;
+
+      @media screen and (max-width:576px) {
+        width: 80%;
+        margin: 0 auto;
+      }
 
       .cards-item {
         display: flex;
