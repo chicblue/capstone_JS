@@ -24,7 +24,7 @@ function renderProductDetail(arrProductDetail) {
     <div class="col-5 avable ${prodD.id}">
     <div class="detail-img">
     <img src="${prodD.image}" alt=""></div>
-    <div class="bg-img"><img src="/assets/img/1f7d6dc51c906c5fe36980662974d571.jpeg" alt=""></div>
+    <div class="bg-img"><img src="./assets/img/1f7d6dc51c906c5fe36980662974d571.jpeg" alt=""></div>
 </div>
 <div class="col-7">
     <h3>
