@@ -1,2 +1,10 @@
 # capstone_JS
-Nguyễn Hoàng Phúc -- Nguyễn Đình Thoại --BC43
+
+Phân Chia Công Việc
+Nguyễn Đình Thoại : 
+--Trang Index 
+--Related Trang Detail
+Nguyễn Hoàng Phúc 
+-- Sản Phẩm Trang Detail
+-- Trang Register
+
